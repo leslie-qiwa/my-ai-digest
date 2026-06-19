@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>my-ai digest</title>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+         max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+  h1 { border-bottom: 2px solid #0066cc; padding-bottom: 8px; display: flex;
+       justify-content: space-between; align-items: center; }
+  .lang-toggle { font-size: 0.5em; padding: 4px 12px; border: 1px solid #0066cc;
+                 border-radius: 4px; cursor: pointer; background: white; color: #0066cc; }
+  .lang-toggle:hover { background: #0066cc; color: white; }
+  .date-nav { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; }
+  .date-link { padding: 6px 12px; border: 1px solid #ddd; border-radius: 4px;
+               background: #f5f5f5; cursor: pointer; font-size: 0.85em;
+               text-decoration: none; color: #333; }
+  .date-link.active { background: #0066cc; color: white; border-color: #0066cc; }
+  .date-link:hover { background: #e0e0e0; }
+  .date-link.active:hover { background: #0052a3; }
+  .history-link { font-size: 0.85em; color: #0066cc; cursor: pointer;
+                  background: none; border: none; padding: 6px 0; }
+  .history-link:hover { text-decoration: underline; }
+  .history-list { display: none; margin: 10px 0; padding: 10px; background: #f9f9f9;
+                  border-radius: 6px; }
+  .history-list.show { display: block; }
+  .history-list a { display: inline-block; margin: 3px 6px; font-size: 0.85em;
+                    color: #0066cc; text-decoration: none; cursor: pointer; }
+  .history-list a:hover { text-decoration: underline; }
+  .tabs { display: flex; gap: 4px; margin-bottom: 20px; flex-wrap: wrap; }
+  .tab { padding: 8px 16px; border: 1px solid #ddd; border-bottom: none;
+         border-radius: 6px 6px 0 0; background: #f5f5f5; cursor: pointer;
+         font-size: 0.9em; }
+  .tab.active { background: #0066cc; color: white; border-color: #0066cc; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .item { border: 1px solid #e0e0e0; border-radius: 6px; padding: 14px; margin: 12px 0; }
+  .item h3 { margin: 0 0 6px 0; }
+  .item h3 a { color: #0066cc; text-decoration: none; }
+  .meta { font-size: 0.85em; color: #666; margin-bottom: 8px; }
+  .meta a { color: #0066cc; text-decoration: none; }
+  .summary { font-size: 0.95em; }
+  .read-full { font-size: 0.85em; margin-top: 4px; }
+  .read-full a { color: #0066cc; text-decoration: none; }
+  .read-full a:hover { text-decoration: underline; }
+  .giscus-toggle { font-size: 0.85em; color: #0066cc; cursor: pointer;
+                   background: none; border: none; padding: 0; margin-top: 6px; }
+  .giscus-toggle:hover { text-decoration: underline; }
+  .giscus-wrap { margin-top: 8px; }
+  .loading { color: #999; }
+  footer { margin-top: 40px; padding-top: 12px; border-top: 1px solid #e0e0e0;
+           font-size: 0.8em; color: #999; }
+</style>
+</head>
+<body>
+<h1 id="title">
+  <span>my-ai digest</span>
+  <button class="lang-toggle" id="lang-btn" onclick="toggleLang()">EN</button>
+</h1>
+<div id="date-nav"></div>
+<div id="content"><p class="loading">Loading...</p></div>
+<footer id="footer"></footer>
+
+<script>
+const BASE = 'digests';
+const GISCUS = {
+  repo: 'leslie-qiwa/my-ai-digest',
+  repoId: 'R_kgDOS2HFwA',
+  category: 'Announcements',
+  categoryId: 'DIC_kwDOS2HFwM4C_fbp',
+};
+
+let allDates = [];
+let currentDate = '';
+let currentData = null;
+let lang = localStorage.getItem('digest_lang') || 'en';
+let openMode = localStorage.getItem('digest_open_mode') || 'same';
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text || '';
+  return div.innerHTML;
+}
+
+function toggleLang() {
+  lang = lang === 'en' ? 'zh' : 'en';
+  localStorage.setItem('digest_lang', lang);
+  if (currentData) renderDigest(currentData);
+}
+
+function toggleOpenMode() {
+  openMode = openMode === 'same' ? 'new' : 'same';
+  localStorage.setItem('digest_open_mode', openMode);
+  if (currentData) renderDigest(currentData);
+}
+
+function renderDateNav() {
+  const recent = allDates.slice(-5).reverse();
+  const older = allDates.slice(0, -5).reverse();
+
+  let html = '<div class="date-nav">';
+  recent.forEach(d => {
+    const active = d === currentDate ? ' active' : '';
+    html += `<a class="date-link${active}" onclick="loadDigest('${d}')">${d}</a>`;
+  });
+  if (older.length) {
+    html += `<button class="history-link" onclick="toggleHistory()">History (${older.length} more)</button>`;
+  }
+  html += '</div>';
+
+  if (older.length) {
+    html += '<div id="history-list" class="history-list">';
+    older.forEach(d => {
+      html += `<a onclick="loadDigest('${d}')">${d}</a>`;
+    });
+    html += '</div>';
+  }
+
+  document.getElementById('date-nav').innerHTML = html;
+}
+
+function toggleHistory() {
+  document.getElementById('history-list').classList.toggle('show');
+}
+
+function loadGiscus(container, term) {
+  if (container.querySelector('.giscus')) return;
+  const script = document.createElement('script');
+  script.src = 'https://giscus.app/client.js';
+  script.setAttribute('data-repo', GISCUS.repo);
+  script.setAttribute('data-repo-id', GISCUS.repoId);
+  script.setAttribute('data-category', GISCUS.category);
+  script.setAttribute('data-category-id', GISCUS.categoryId);
+  script.setAttribute('data-mapping', 'specific');
+  script.setAttribute('data-term', term);
+  script.setAttribute('data-strict', '0');
+  script.setAttribute('data-reactions-enabled', '1');
+  script.setAttribute('data-emit-metadata', '0');
+  script.setAttribute('data-input-position', 'bottom');
+  script.setAttribute('data-theme', 'preferred_color_scheme');
+  script.setAttribute('data-lang', lang === 'zh' ? 'zh-CN' : 'en');
+  script.setAttribute('data-loading', 'lazy');
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  container.appendChild(script);
+}
+
+function toggleGiscus(btn) {
+  const wrap = btn.nextElementSibling;
+  if (wrap.style.display === 'none') {
+    wrap.style.display = 'block';
+    btn.textContent = lang === 'zh' ? '收起评论' : 'Hide comments';
+    loadGiscus(wrap, btn.dataset.term);
+  } else {
+    wrap.style.display = 'none';
+    btn.textContent = lang === 'zh' ? '评论 / 反应' : 'Comment / React';
+  }
+}
+
+function renderDigest(data) {
+  currentData = data;
+  const dateStr = data.date || '';
+  const openLabel = openMode === 'same' ? '↗ New tab' : '↙ Same tab';
+  document.getElementById('title').innerHTML =
+    `<span>my-ai digest — ${escapeHtml(dateStr)}</span>` +
+    `<span><button class="lang-toggle" onclick="toggleOpenMode()">${openLabel}</button> ` +
+    `<button class="lang-toggle" onclick="toggleLang()">${lang === 'en' ? '中文' : 'EN'}</button></span>`;
+
+  document.title = 'my-ai digest — ' + dateStr;
+
+  const feeds = data.feeds || [];
+  if (!feeds.length) {
+    document.getElementById('content').innerHTML = '<p>No digest data available.</p>';
+    return;
+  }
+
+  let html = '<div class="tabs">';
+  feeds.forEach((feed, i) => {
+    const items = feed.items || [];
+    const active = i === 0 ? ' active' : '';
+    html += `<button class="tab${active}" onclick="showTab('${feed.id}')">${escapeHtml(feed.label)} (${items.length})</button>`;
+  });
+  html += '</div>';
+
+  feeds.forEach((feed, i) => {
+    const items = feed.items || [];
+    const active = i === 0 ? ' active' : '';
+    html += `<div id="tab-${feed.id}" class="tab-content${active}">`;
+
+    if (!items.length) {
+      html += '<p>No items in this feed.</p>';
+    }
+
+    items.forEach(item => {
+      const summary = lang === 'zh' && item.summary_zh ? item.summary_zh : (item.summary || '');
+      const commentLabel = lang === 'zh' ? '评论 / 反应' : 'Comment / React';
+      const title = item.title || '';
+
+      html += '<div class="item">';
+      html += `<h3><a href="${escapeHtml(item.url)}" target="_blank">${escapeHtml(title)}</a></h3>`;
+      html += '<div class="meta">';
+      if (item.score) html += `${item.score} points`;
+      if (item.comment_cnt) html += ` &middot; <a href="${escapeHtml(item.comment_url)}" target="_blank">${item.comment_cnt} comments</a>`;
+      if (item.comment_url) html += ` &middot; <a href="${escapeHtml(item.comment_url)}" target="_blank">hn</a>`;
+      if (item.tags && item.tags.length) html += ` &middot; ${item.tags.map(escapeHtml).join(', ')}`;
+      html += '</div>';
+      if (summary) html += `<div class="summary">${escapeHtml(summary)}</div>`;
+      if (item.content_file && dateStr) {
+        const readerUrl = `reader.html?file=${BASE}/${dateStr}/${escapeHtml(item.content_file)}`;
+        const target = openMode === 'new' ? ' target="_blank"' : '';
+        html += `<div class="read-full"><a href="${readerUrl}"${target}>${lang === 'zh' ? '阅读全文翻译' : 'Read full translation'}</a></div>`;
+      }
+      html += `<button class="giscus-toggle" data-term="${escapeHtml(title)}" onclick="toggleGiscus(this)">${commentLabel}</button>`;
+      html += '<div class="giscus-wrap" style="display:none;"></div>';
+      html += '</div>';
+    });
+
+    html += '</div>';
+  });
+
+  document.getElementById('content').innerHTML = html;
+  document.getElementById('footer').textContent = 'Generated at ' + (data.generated_at || '');
+}
+
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+async function loadDigest(date) {
+  currentDate = date;
+  renderDateNav();
+  try {
+    const resp = await fetch(`${BASE}/${date}.yaml`);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const text = await resp.text();
+    const data = jsyaml.load(text);
+    renderDigest(data);
+  } catch (e) {
+    document.getElementById('content').innerHTML = `<p>Failed to load digest: ${escapeHtml(e.message)}</p>`;
+  }
+}
+
+async function init() {
+  try {
+    const resp = await fetch(`${BASE}/index.yaml`);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const text = await resp.text();
+    const manifest = jsyaml.load(text);
+
+    allDates = manifest.files || [];
+
+    if (manifest.latest) {
+      loadDigest(manifest.latest);
+    } else {
+      renderDateNav();
+      document.getElementById('content').innerHTML = '<p>No digests yet.</p>';
+    }
+  } catch (e) {
+    document.getElementById('content').innerHTML = '<p>No digests yet. Run the engine to generate one.</p>';
+  }
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+name: Validate Digest
+on:
+  pull_request:
+    paths:
+      - 'digests/*.yaml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate digest YAML
+        run: |
+          python3 -c "
+          import sys, yaml, glob
+          errors = []
+          files = [f for f in glob.glob('digests/*.yaml') if not f.endswith('index.yaml')]
+          for path in files:
+              with open(path) as f:
+                  data = yaml.safe_load(f)
+              if not isinstance(data, dict):
+                  errors.append(f'{path}: root must be a mapping')
+                  continue
+              for field in ('date', 'generated_at', 'feeds'):
+                  if field not in data:
+                      errors.append(f'{path}: missing field \"{field}\"')
+              urls = set()
+              for feed in data.get('feeds', []):
+                  for field in ('id', 'label', 'items'):
+                      if field not in feed:
+                          errors.append(f'{path}: feed missing \"{field}\"')
+                  for item in feed.get('items', []):
+                      if 'url' not in item or 'title' not in item:
+                          errors.append(f'{path}: item missing url or title')
+                      url = item.get('url', '')
+                      if url in urls:
+                          errors.append(f'{path}: duplicate URL {url}')
+                      urls.add(url)
+          if errors:
+              for e in errors:
+                  print(f'ERROR: {e}', file=sys.stderr)
+              sys.exit(1)
+          print(f'Validated {len(files)} file(s): OK')
+          "
+      - name: Enable auto-merge
+        if: success()
+        run: gh pr merge --auto --squash "${{ github.event.pull_request.number }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

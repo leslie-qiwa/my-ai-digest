@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reading...</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+         max-width: 800px; margin: 0 auto; padding: 20px; color: #333; line-height: 1.8; }
+  .back { font-size: 0.9em; margin-bottom: 20px; }
+  .back a { color: #0066cc; text-decoration: none; }
+  .back a:hover { text-decoration: underline; }
+  #content h1 { border-bottom: 2px solid #0066cc; padding-bottom: 8px; font-size: 1.4em; }
+  #content h2 { color: #0066cc; margin-top: 24px; }
+  #content p { margin: 12px 0; }
+  #content code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  #content pre { background: #f5f5f5; padding: 12px; border-radius: 6px; overflow-x: auto; }
+  #content blockquote { border-left: 3px solid #0066cc; margin: 12px 0; padding: 4px 16px; color: #555; }
+  .giscus-section { margin: 24px 0; padding-top: 16px; border-top: 1px solid #e0e0e0; }
+  .loading { color: #999; }
+</style>
+</head>
+<body>
+<div class="back"><a href="index.html">&larr; Back to digest</a></div>
+<div id="giscus-top" class="giscus-section"></div>
+<div id="content"><p class="loading">Loading...</p></div>
+<div id="giscus-bottom" class="giscus-section"></div>
+
+<script>
+const GISCUS = {
+  repo: 'leslie-qiwa/my-ai-digest',
+  repoId: 'R_kgDOS2HFwA',
+  category: 'Announcements',
+  categoryId: 'DIC_kwDOS2HFwM4C_fbp',
+};
+
+function loadGiscus(container, term) {
+  const script = document.createElement('script');
+  script.src = 'https://giscus.app/client.js';
+  script.setAttribute('data-repo', GISCUS.repo);
+  script.setAttribute('data-repo-id', GISCUS.repoId);
+  script.setAttribute('data-category', GISCUS.category);
+  script.setAttribute('data-category-id', GISCUS.categoryId);
+  script.setAttribute('data-mapping', 'specific');
+  script.setAttribute('data-term', term);
+  script.setAttribute('data-strict', '0');
+  script.setAttribute('data-reactions-enabled', '1');
+  script.setAttribute('data-emit-metadata', '0');
+  script.setAttribute('data-input-position', 'bottom');
+  script.setAttribute('data-theme', 'preferred_color_scheme');
+  script.setAttribute('data-lang', 'zh-CN');
+  script.setAttribute('data-loading', 'lazy');
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  container.appendChild(script);
+}
+
+async function init() {
+  const params = new URLSearchParams(window.location.search);
+  const file = params.get('file');
+  if (!file) {
+    document.getElementById('content').innerHTML = '<p>No file specified.</p>';
+    return;
+  }
+  try {
+    const resp = await fetch(file);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const md = await resp.text();
+    document.getElementById('content').innerHTML = marked.parse(md);
+    const h1 = document.querySelector('#content h1');
+    const title = h1 ? h1.textContent : file;
+    document.title = title;
+
+    loadGiscus(document.getElementById('giscus-top'), title);
+    loadGiscus(document.getElementById('giscus-bottom'), title);
+  } catch (e) {
+    document.getElementById('content').innerHTML = `<p>Failed to load: ${e.message}</p>`;
+  }
+}
+init();
+</script>
+</body>
+</html>
