@@ -1,10 +1,315 @@
 date: '2026-06-21'
-generated_at: 2026-06-21 16:47 UTC
+generated_at: 2026-06-21 17:08 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://www.bbc.com/future/article/20260618-the-weird-and-wonderful-libraries-of-finland
+    title: Renting a sewing machine from the library
+    score: 297
+    comment_cnt: 170
+    comment_url: https://news.ycombinator.com/item?id=48613755
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 芬兰正在重新定义公共图书馆，将其打造为社区服务中心，市民可以借用从缝纫机到音乐录音室的各种资源，超过55%的芬兰人每月至少访问一次图书馆，远超美国和英国的平均水平。研究表明，这一模式以法律为保障、人均投入65.78欧元，通过促进社会包容、数字化服务和公共讨论来强化民主，每投入一美元可产生三到五美元的回报。
+    content_file: renting-a-sewing-machine-from-the-library.md
+    summary: Finland is redefining public libraries as community service centers where
+      citizens can borrow everything from sewing machines to music studios, with over
+      55% of Finns visiting monthly—far exceeding US and UK averages. Research suggests
+      this model, backed by law and €65.78 per-capita spending, strengthens democracy
+      by promoting social inclusion, digital access, and public debate, returning
+      three to five dollars for every dollar invested.
+  - url: https://fosterelli.co/developers-dont-understand-cors
+    title: Developers don't understand CORS (2019)
+    score: 290
+    comment_cnt: 232
+    comment_url: https://news.ycombinator.com/item?id=48614844
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 许多Web开发者对CORS的工作原理存在误解，Zoom的本地Web服务器漏洞就是典型案例——工程师通过图片尺寸编码的方式绕过跨域限制，而非正确设置Access-Control-Allow-Origin响应头。这一事件揭示了行业中普遍存在的问题：开发者倾向于绕过浏览器安全策略而非学习正确使用，且经常从Stack
+      Overflow上复制不安全的默认配置。
+    content_file: developers-don-t-understand-cors-2019.md
+    summary: Many web developers misunderstand how CORS works, as illustrated by Zoom's
+      localhost web server vulnerability where engineers built an image-dimension
+      hack to bypass cross-origin restrictions instead of properly setting Access-Control-Allow-Origin
+      headers. The incident highlights a widespread industry problem where developers
+      circumvent browser security policies rather than learning to use them correctly,
+      often copying insecure defaults from Stack Overflow answers.
+  - url: https://www.sciencedaily.com/releases/2026/06/260614012006.htm
+    title: Your brain was never designed for this much bad news
+    score: 272
+    comment_cnt: 244
+    comment_url: https://news.ycombinator.com/item?id=48615569
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 人类在进化中形成了对负面信息的高度敏感，这种机制曾帮助祖先在威胁中存活，但如今却导致大脑被全球范围内持续不断的坏消息淹没，全球已有40%的人至少有时会主动回避新闻。研究人员建议通过限定阅读时段、注重深度而非数量、将关注转化为行动以及识别"愤怒诱饵"来管理新闻消费，而非完全回避——因为完全回避会损害公民知情权。
+    content_file: your-brain-was-never-designed-for-this-much-bad-news.md
+    summary: Humans evolved a negativity bias that helped ancestors survive threats,
+      but this same wiring now causes "news fatigue" as brains are overwhelmed by
+      a constant global stream of bad news, with 40% of people worldwide now avoiding
+      news at least sometimes. Researchers recommend managing consumption through
+      timed windows, choosing depth over volume, linking awareness to action, and
+      recognizing rage bait—rather than disengaging entirely, which undermines informed
+      citizenship.
+  - url: https://www.phoronix.com/news/Linux-7.2-Drops-strncpy
+    title: Linux eliminates the strncpy API after six years of work, 360 patches
+    score: 261
+    comment_cnt: 283
+    comment_url: https://news.ycombinator.com/item?id=48612943
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: Linux 7.2 经过六年努力和约 362 次提交，终于从内核中彻底移除了 strncpy API，消除了该函数因 NUL 终止语义反直觉和冗余零填充导致的长期
+      bug 来源。内核代码现应根据场景使用 strscpy()、strscpy_pad()、strtomem_pad()、memcpy_and_pad()
+      或 memcpy() 等更安全的替代函数。
+    content_file: linux-eliminates-the-strncpy-api-after-six-years-of-work-360.md
+    summary: Linux 7.2 has fully eliminated the strncpy API from the kernel after
+      six years of effort and approximately 362 commits, removing a long-standing
+      source of bugs caused by its counter-intuitive NUL-termination semantics and
+      inefficient zero-filling behavior. Kernel code should now use safer alternatives
+      such as strscpy(), strscpy_pad(), strtomem_pad(), memcpy_and_pad(), or memcpy()
+      depending on the use case.
+  - url: https://sibexi.co/posts/epoll-vs-io_uring/
+    title: Epoll vs. io_uring in Linux
+    score: 224
+    comment_cnt: 52
+    comment_url: https://news.ycombinator.com/item?id=48613872
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 本文比较了 Linux 的两种异步 I/O 机制——epoll（2002年）和 io_uring（2019年），解释了 epoll
+      基于就绪通知的模型每次 I/O 事件需要两次系统调用，而 io_uring 基于完成通知的模型通过共享环形缓冲区批量处理操作，大幅减少了内核态切换开销。作者通过重写反向代理项目
+      TinyGate 的实践经验，得出结论：对于现代内核（5.1+）上的新项目，io_uring 是明确的首选，它还提供零拷贝 I/O 和 SQPOLL 等特性，可实现接近零系统调用的开销。
+    content_file: epoll-vs-io-uring-in-linux.md
+    summary: The article compares Linux's two asynchronous I/O mechanisms—epoll (2002)
+      and io_uring (2019)—explaining how epoll's readiness-based model requires two
+      syscalls per I/O event while io_uring's completion-based model batches operations
+      through shared ring buffers, drastically reducing kernel boundary crossings.
+      Through the author's experience rewriting their reverse proxy TinyGate, they
+      conclude that io_uring is the clear choice for new projects on modern kernels
+      (5.1+), offering features like zero-copy I/O and SQPOLL for near-zero syscall
+      overhead.
+  - url: https://vinibrasil.com/when-i-reject-ai-code-even-if-it-works/
+    title: When I reject AI code even if it works
+    score: 210
+    comment_cnt: 145
+    comment_url: https://news.ycombinator.com/item?id=48614631
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 作者认为，AI辅助编程的真正瓶颈不在于代码生成，而在于审查AI生成的代码，并分享了拒绝AI代码的具体标准——例如当改动范围超过问题本身，或引入了不必要的抽象。作者强调，编程智能体仍然需要经验丰富的工程师来引导其产出优质方案，通过CI测试的可运行代码并不等同于良好的工程解决方案。
+    content_file: when-i-reject-ai-code-even-if-it-works.md
+    summary: The author argues that the real bottleneck in AI-assisted coding is reviewing
+      generated code, not writing it, and shares specific criteria for rejecting AI
+      output—such as when the diff exceeds the problem scope or introduces premature
+      abstractions. They emphasize that coding agents still require experienced engineers
+      to guide them toward good solutions, and that working code passing CI does not
+      equate to a well-engineered solution.
+  - url: https://www.esquire.com/news-politics/politics/a71619211/peter-thiel-dialog-club-wired-report/
+    title: Turns Out, There Is a Cabal of Elite Crazies Trying to Control the World
+    score: 192
+    comment_cnt: 82
+    comment_url: https://news.ycombinator.com/item?id=48613732
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 《连线》杂志曝光了一个由彼得·蒂尔领导的秘密精英组织Dialog，其222名成员包括北约欧洲盟军最高司令、特朗普政府官员、美国参议员及科技巨头，他们定期举行闭门会议，讨论从核能到"建立邪教"等议题。泄露的2026年8月都柏林退修会登记名单显示，成员们高度关注人工智能对社会的近期颠覆性影响，预测将出现大规模劳动力替代、针对数据中心的国内恐怖主义以及持续加速的"社会退化"。
+    content_file: turns-out-there-is-a-cabal-of-elite-crazies-trying-to-contro.md
+    summary: Wired has revealed Dialog, a secretive group led by Peter Thiel comprising
+      222 elite members including NATO's supreme allied commander, Trump administration
+      officials, U.S. senators, and tech moguls, who gather for off-the-record retreats
+      discussing topics from nuclear energy to "Build-a-Cult." The leaked registration
+      list for the group's August 2026 Dublin retreat shows members are preoccupied
+      with AI's near-term societal disruption, predicting mass labor displacement,
+      domestic terrorism targeting data centers, and accelerating "societal degeneration."
+  - url: https://www.sciencedaily.com/releases/2026/06/260617032207.htm
+    title: The ability to regrow body parts is dormant in mammals, not lost
+    score: 188
+    comment_cnt: 66
+    comment_url: https://news.ycombinator.com/item?id=48611083
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 德克萨斯A&M大学的科学家证明，哺乳动物可能拥有处于休眠状态的再生能力，通过依次使用FGF2和BMP2两种生长因子的两步疗法可以重新激活这种能力，在动物实验中成功再生了截肢后的骨骼、关节、韧带和肌腱。该方法将身体的自然愈合反应从瘢痕形成重新导向组织再生，无需外源干细胞，且两种生长因子已在临床使用或试验中，有望缩短走向人类应用的路径。
+    content_file: the-ability-to-regrow-body-parts-is-dormant-in-mammals-not-l.md
+    summary: Scientists at Texas A&M University have demonstrated that mammals may
+      possess dormant regenerative abilities that can be reactivated using a sequential
+      two-step treatment with growth factors FGF2 and BMP2, successfully regrowing
+      bone, joints, ligaments, and tendons after amputation in animal studies. The
+      approach redirects the body's natural healing response away from scar formation
+      and toward tissue regeneration without requiring external stem cells, and both
+      growth factors are already in clinical use or trials, potentially shortening
+      the path to human applications.
+  - url: https://www.cnn.com/2026/06/20/americas/brazil-hackers-unauthorized-alert-latam
+    title: Unauthorized alert sent to cell phones across Brazil
+    score: 178
+    comment_cnt: 127
+    comment_url: https://news.ycombinator.com/item?id=48612502
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 据报道，黑客于周六入侵了巴西国家紧急警报系统，向巴拉那州、圣保罗州和里约热内卢等多个州的手机发送了包含"misantropi4"（"厌世"一词的黑客拼写）的未经授权的"极端"警报。巴西当局已将Cellbroadcast平台下线，并正在调查虚假警报的来源，各级民防机构均确认未发送该警报。
+    content_file: unauthorized-alert-sent-to-cell-phones-across-brazil.md
+    summary: Hackers reportedly breached Brazil's national emergency alert system
+      on Saturday, sending unauthorized "extreme" alerts containing the word "misantropi4"
+      (leetspeak for "misanthropy") to cell phones across multiple states including
+      Paraná, São Paulo, and Rio de Janeiro. Brazilian authorities took the Cellbroadcast
+      platform offline and are investigating the origin of the false alerts, which
+      were not issued by any civil defense agency.
+  - url: https://github.com/oven-sh/WebKit/pull/249
+    title: Bun has an open PR adding shared-memory threads to JavaScriptCore
+    score: 139
+    comment_cnt: 294
+    comment_url: https://news.ycombinator.com/item?id=48610841
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: Bun 创始人 Jarred Sumner 提交了一个实验性 PR（#249），为 JavaScriptCore 添加共享内存线程支持，包含多线程堆管理、每线程分配器、TID/共享写标记蝶形数组、N
+      线程安全点、JIT 多层级支持以及 Thread/Lock/Condition/ThreadLocal API。该实现包含 151 个提交、TSAN 集成、竞态放大器和
+      85 个测试用例，目前尚不可用，通过 --useJSThreads 标志启用并保留 GIL 回退层。
+    content_file: bun-has-an-open-pr-adding-shared-memory-threads-to-javascrip.md
+    summary: Bun creator Jarred Sumner has opened an experimental pull request (#249)
+      to add shared-memory thread support to JavaScriptCore, featuring a multi-mutator
+      heap with per-thread allocators, TID/shared-write tagged butterflies, JIT tier
+      support under N mutators, and a Thread/Lock/Condition/ThreadLocal API. The implementation,
+      which includes 151 commits, TSAN integration, a race amplifier, and an 85-test
+      corpus, remains non-functional and is gated behind the --useJSThreads flag with
+      a GIL fallback layer.
+  - url: https://github.com/overflowy/make-look-scanned
+    title: 'Show HN: Make PDFs look scanned (CLI or in the browser via WASM)'
+    score: 135
+    comment_cnt: 58
+    comment_url: https://news.ycombinator.com/item?id=48611513
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: make-look-scanned 是一款 Go 命令行工具，能将 PDF 文件处理成物理扫描件的效果——添加倾斜、灰度、暖色纸张色调、扫描噪点、虚焦、边缘阴影和
+      JPEG 压缩伪影，生成确定性的纯图像 PDF。该工具还支持通过 WASM 在浏览器中运行（使用 PDF.js 替代 MuPDF），并可通过 TOML
+      配置文件定义可复用的效果预设。
+    content_file: show-hn-make-pdfs-look-scanned-cli-or-in-the-browser-via-was.md
+    summary: make-look-scanned is a Go CLI tool that degrades a PDF to look like a
+      physical scan by applying skew, grayscale, warm paper tone, scanner grain, defocus,
+      edge shadow, and JPEG compression artifacts, producing a deterministic image-only
+      PDF. It also runs client-side in the browser via a WASM build that uses PDF.js
+      instead of MuPDF, and supports reusable effect presets through a TOML config
+      file.
+  - url: https://lcamtuf.substack.com/p/the-100000-whys-of-ai
+    title: The 100k Whys of AI
+    score: 132
+    comment_cnt: 77
+    comment_url: https://news.ycombinator.com/item?id=48616017
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 在亚马逊搜索"100000 whys"会出现约150本几乎一模一样的AI生成儿童书籍——相同的书名、相同的封面元素、甚至高度相似的作者姓氏——这充分展示了大语言模型准确定性输出在大规模下产生的明显模式。作者认为，虽然单条AI生成的句子可能与人类写作难以区分，但大量提示下选择的统计聚类使得AI生成内容在整体上可被识别，并正在瓦解传统的在线内容互动模式。
+    content_file: the-100k-whys-of-ai.md
+    summary: A search for "100,000 Whys" on Amazon reveals roughly 150 near-identical
+      AI-generated children's books — same titles, same cover motifs, even suspiciously
+      similar author surnames — illustrating how LLMs' quasi-deterministic outputs
+      create unmistakable patterns at scale. The author argues that while individual
+      AI-written sentences may be indistinguishable from human prose, the statistical
+      clustering of choices across many prompts makes AI-generated content collectively
+      identifiable, undermining traditional models of online content creation.
+  - url: https://movq.de/blog/postings/2026-06-20/0/POSTING-en.html
+    title: 'Windows UI evolution: Clicking an unassociated file'
+    score: 104
+    comment_cnt: 72
+    comment_url: https://news.ycombinator.com/item?id=48616173
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 本文以图文形式回顾了从 Windows 2.11（1989）到 Windows 10（2015）打开未知扩展名文件时系统对话框的演变历程——从简单的"不可执行"报错，逐步发展为功能日趋丰富的程序关联选择界面。其中值得关注的节点包括
+      Windows 95 的内联程序选择器、XP 那个不太成功的网络查询服务（2006 年已关闭），以及 Windows 10 扁平化但交互提示不够明显的"应用商店"集成。
+    content_file: windows-ui-evolution-clicking-an-unassociated-file.md
+    summary: A visual tour of how Windows handles opening files with unknown extensions,
+      from Windows 2.11 (1989) through Windows 10 (2015), showing the evolution from
+      a simple "not executable" error to progressively richer dialogs for choosing
+      or finding an associated program. Notable stops include Windows 95's inline
+      program picker, XP's ill-fated web-service nudge (shut down in 2006), and Windows
+      10's flat, less-obviously-interactive "Store" integration.
+  - url: https://alexkritchevsky.com/2024/02/28/geometric-algebra.html
+    title: The case against geometric algebra (2024)
+    score: 97
+    comment_cnt: 83
+    comment_url: https://news.ycombinator.com/item?id=48617782
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 本文认为，几何代数虽然确实解决了数学教学和应用中的一些实际问题，但其过度依赖几何积以及社区中缺乏自我批评的狂热文化，严重阻碍了它的发展。作者指出，真正有用的核心概念——多重向量和楔积——源自外代数且已逐渐被主流数学接纳，几何代数需要修正自身的结构性缺陷，而非以当前形态继续传教式推广。
+    content_file: the-case-against-geometric-algebra-2024.md
+    summary: The article argues that Geometric Algebra, while addressing real shortcomings
+      in how math is taught and used, is held back by its over-reliance on the geometric
+      product and a zealous community culture that discourages self-criticism and
+      structural improvement. The author contends that the useful core ideas—multivectors
+      and the wedge product from Exterior Algebra—are already gaining traction in
+      mainstream mathematics, and GA needs to fix its foundational issues rather than
+      evangelize its current form.
+  - url: https://kevinak.se/blog/who-actually-owns-your-atproto-identity-hint-its-probably-not-you
+    title: 'Who Owns Your ATProto Identity? Hint: It''s Probably Not You'
+    score: 94
+    comment_cnt: 82
+    comment_url: https://news.ycombinator.com/item?id=48619140
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ATProto 的架构赋予 PDS（个人数据服务器）运营者对用户签名密钥和轮换密钥的完全控制权，使其能够在所有 ATProto 应用中冒充用户身份，或彻底吊销用户身份——其影响范围远超传统平台被入侵的后果。作者主张应在账户创建流程中默认注册用户自控的备份轮换密钥，并为用户提供更好的工具来审计
+      PDS 代签的活动。
+    content_file: who-owns-your-atproto-identity-hint-it-s-probably-not-you.md
+    summary: ATProto's architecture gives PDS (Personal Data Server) operators full
+      control over users' signing and rotation keys, enabling them to impersonate
+      users across every ATProto application or revoke their identity entirely—far
+      exceeding the blast radius of traditional platform compromises. The author argues
+      that self-controlled backup rotation keys should be enrolled by default during
+      account creation, and users need better tools to audit PDS-signed activity.
+  - url: https://www.bbc.com/news/articles/c0rygp005wjo
+    title: '''We had to get out of the way'': The backlash over delivery robots'
+    score: 81
+    comment_cnt: 87
+    comment_url: https://news.ycombinator.com/item?id=48614390
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 在美国、英国等多个城市，人行道上的自动配送机器人正面临越来越多的反对声浪，居民和地方议会指出其存在行人安全隐患、无障碍通行问题以及监管框架缺失等问题。包括芝加哥、旧金山和多伦多在内的多个城市已实施禁令或限制措施，同时工会警告，若该技术扩展至预计2034年的210万台规模，将对就业造成重大冲击。
+    content_file: we-had-to-get-out-of-the-way-the-backlash-over-delivery-robo.md
+    summary: Autonomous delivery robots on sidewalks are facing growing backlash in
+      cities across the US, UK, and beyond, with residents and local councils citing
+      pedestrian safety hazards, accessibility concerns, and lack of regulatory frameworks.
+      Several cities including Chicago, San Francisco, and Toronto have imposed bans
+      or restrictions, while labor unions warn of significant job losses if the technology
+      scales to the projected 2.1 million units by 2034.
+  - url: https://shiftmag.dev/ctos-agree-cognitive-debt-is-the-new-technical-debt-10229/
+    title: 'CTOs Agree: Cognitive Debt Is the New Technical Debt'
+    score: 73
+    comment_cnt: 60
+    comment_url: https://news.ycombinator.com/item?id=48617323
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 在多伦多举办的CTO Craft晚宴上，资深工程领导者们一致认为，AI采用已从自由支出阶段进入更艰难的清算期——投资回报率难以衡量、token成本失控、代码生成速度与人工审查能力之间的差距日益扩大。讨论中浮现出一个新概念——"认知债务"，即AI加速的功能产出所带来的维护负担，已超出团队理解和管理其交付成果的能力。
+    content_file: ctos-agree-cognitive-debt-is-the-new-technical-debt.md
+    summary: At a CTO Craft dinner in Toronto, senior engineering leaders agreed that
+      AI adoption has moved past the free-spending phase into a harder reckoning with
+      unmeasurable ROI, uncontrolled token costs, and a growing gap between code generation
+      speed and human review capacity. The discussion surfaced a new concern—"cognitive
+      debt"—where AI-accelerated feature output creates maintenance burdens that outpace
+      teams' ability to understand and manage what they've shipped.
+  - url: https://www.publictechnology.net/2026/06/15/public-order-justice-and-rights/home-office-launches-75m-policeai-to-capitalise-on-artificial-intelligence/
+    title: UK Home Office launches £75M 'PoliceAI' to capitalise on artificial intelligence
+    score: 38
+    comment_cnt: 78
+    comment_url: https://news.ycombinator.com/item?id=48612806
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 英国内政部正式启动了PoliceAI国家中心，未来三年投入7500万英镑，在英格兰和威尔士所有警察部队中推广人工智能应用，该中心此前在一月份的警务白皮书中曾以"Police.AI"为名提出。该中心将优先部署AI工具用于分类数字证据、编辑音视频文件及打击财产犯罪，政府称最终可释放相当于3000名警员的警力资源。
+    content_file: uk-home-office-launches-ps75m-policeai-to-capitalise-on-arti.md
+    summary: The UK Home Office has officially launched PoliceAI, a £75m national
+      centre to scale artificial intelligence across all police forces in England
+      and Wales, rebranded from the "Police.AI" name proposed in January's policing
+      white paper. The centre will prioritise AI tools for triaging digital evidence,
+      redacting audio-visual files, and tackling property crime, with the government
+      claiming it could eventually free up the equivalent of 3,000 extra officers.
+  - url: https://news.ycombinator.com/item?id=48611988
+    title: 'Ask HN: Are people optimistic about the future?'
+    score: 32
+    comment_cnt: 71
+    comment_url: https://news.ycombinator.com/item?id=48611988
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 一场广泛的网络讨论揭示了人们对未来的深度悲观情绪，评论者将住房负担不起、匿名性丧失、美国两党政治失灵、气候变化应对不力以及科技行业对社会的背叛列为主要忧虑。虽然大多数声音表达了对经济崩溃和环境灾难的无奈与恐惧，但仍有少数人基于人类的适应能力和年轻一代的素质保持着谨慎的乐观。
+    content_file: ask-hn-are-people-optimistic-about-the-future.md
+    summary: A wide-ranging online discussion reveals deep pessimism about the future,
+      with commenters citing housing unaffordability, eroding anonymity, political
+      dysfunction in the US two-party system, climate change inaction, and tech industry
+      betrayal of society as key concerns. While most voices express resignation or
+      fear of economic collapse and environmental catastrophe, a few maintain cautious
+      optimism rooted in humanity's adaptability and the capability of younger generations.
   - url: https://blog.apnic.net/2026/04/28/google-hits-50-ipv6/
     title: Google Hits 50% IPv6
     score: 324
