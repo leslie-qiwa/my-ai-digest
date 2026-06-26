@@ -1,0 +1,185 @@
+date: '2026-06-26'
+generated_at: 2026-06-26 02:01 UTC
+feeds:
+- id: hackernews-top
+  label: Hacker News Hot Discussions
+  provider: hn_algolia
+  items:
+  - url: https://news.ycombinator.com/item?id=48668199
+    title: 'Ask HN: Where is the programming profession going?'
+    score: 105
+    comment_cnt: 108
+    comment_url: https://news.ycombinator.com/item?id=48668199
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 一位曾经营小型软件公司的创始人，在观察一家15人公司后深感震惊：代码不再是唯一可信来源，开发者把编写、审查乃至理解都交给Claude，同时运行多个会话，并大量依赖LLM生成的测试。一位评论者回应称，如今深入理解系统以设计正确方案的认知负担更重，使人更高效却也更疲惫，并认为不断攀升的速度预期将使有效使用AI成为职业生存的必备技能。
+    content_file: ask-hn-where-is-the-programming-profession-going.md
+    summary: A former founder of a small software company describes being shocked
+      after observing a friend's 15-person company where code is no longer the source
+      of truth—developers offload writing, reviewing, and even understanding to Claude,
+      run multiple simultaneous sessions, and lean on LLM-generated tests. A commenter
+      responds that deeply understanding the system to design the right solution is
+      now a heavier cognitive load, leaving them more productive but more tired, and
+      argues that rising velocity expectations will make effective AI use essential
+      for career survival.
+  - url: https://scrollprize.org/firstscroll
+    title: An entire Herculaneum scroll has been read for the first time
+    score: 883
+    comment_cnt: 198
+    comment_url: https://news.ycombinator.com/item?id=48675179
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://hackernewstrends.com
+    title: 'Show HN: I made Google Trends for Hacker News by indexing 18 years of
+      comments'
+    score: 637
+    comment_cnt: 143
+    comment_url: https://news.ycombinator.com/item?id=48673671
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://9to5mac.com/2026/06/23/lastpass-notifies-users-of-yet-another-data-breach/
+    title: LastPass notifies users of yet another data breach
+    score: 466
+    comment_cnt: 205
+    comment_url: https://news.ycombinator.com/item?id=48671468
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://blog.cloudflare.com/oauth-for-all/
+    title: OAuth for all
+    score: 360
+    comment_cnt: 154
+    comment_url: https://news.ycombinator.com/item?id=48668033
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://expression.fire.org/p/the-papers-please-era-of-the-internet
+    title: The 'papers, please' era of the internet will decimate your privacy
+    score: 259
+    comment_cnt: 116
+    comment_url: https://news.ycombinator.com/item?id=48679608
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://newsroom.ibm.com/2026-06-25-ibm-debuts-worlds-first-sub-1-nanometer-chip-technology
+    title: IBM debuts sub-1 nanometer chip technology
+    score: 247
+    comment_cnt: 143
+    comment_url: https://news.ycombinator.com/item?id=48674967
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://github.com/LuaJIT/LuaJIT/issues/1475
+    title: LuaJIT 3.0 proposed syntax extensions
+    score: 223
+    comment_cnt: 151
+    comment_url: https://news.ycombinator.com/item?id=48667336
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://www.neowin.net/news/windows-10-quietly-gets-one-more-year-of-support-and-updates/
+    title: Windows 10 quietly gets one more year of support and updates
+    score: 220
+    comment_cnt: 190
+    comment_url: https://news.ycombinator.com/item?id=48675369
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://ziglang.org/devlog/2026/#2026-06-25
+    title: Zig's new bitCast semantics and LLVM back end improvements
+    score: 207
+    comment_cnt: 79
+    comment_url: https://news.ycombinator.com/item?id=48673825
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://blog.interceptfund.com/p/ending-respiratory-infections
+    title: Ending respiratory infections
+    score: 192
+    comment_cnt: 133
+    comment_url: https://news.ycombinator.com/item?id=48667588
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://jamesoclaire.com/2026/06/25/the-unbearable-cheapness-of-open-weight-models/
+    title: The unbearable cheapness of open weight models
+    score: 139
+    comment_cnt: 131
+    comment_url: https://news.ycombinator.com/item?id=48668255
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://deno.com/blog/v2.9
+    title: Deno 2.9
+    score: 136
+    comment_cnt: 59
+    comment_url: https://news.ycombinator.com/item?id=48675717
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://trakkr.ai/bias
+    title: 'Political bias in AI: Where the AI models stand'
+    score: 104
+    comment_cnt: 213
+    comment_url: https://news.ycombinator.com/item?id=48672779
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://paulkrugman.substack.com/p/why-does-everyone-hate-ai
+    title: Why Does Everyone Hate AI?
+    score: 81
+    comment_cnt: 139
+    comment_url: https://news.ycombinator.com/item?id=48672694
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://www.ign.com/articles/grand-theft-auto-6-physical-copies-wont-include-a-disc-will-just-be-a-code-in-a-box
+    title: GTA 6 Physical Copies Won't Include a Disc, Will Just Be a Code in a Box
+    score: 50
+    comment_cnt: 73
+    comment_url: https://news.ycombinator.com/item?id=48668662
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://rozumem.xyz/posts/17
+    title: The Doorman's Fallacy in action
+    score: 38
+    comment_cnt: 58
+    comment_url: https://news.ycombinator.com/item?id=48678495
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
