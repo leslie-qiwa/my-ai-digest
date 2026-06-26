@@ -1,10 +1,42 @@
 date: '2026-06-26'
-generated_at: 2026-06-26 08:02 UTC
+generated_at: 2026-06-26 10:02 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://www.fernandoi.cl/posts/hackmyclaw/
+    title: What happened after 2k people tried to hack my AI assistant
+    score: 160
+    comment_cnt: 55
+    comment_url: https://news.ycombinator.com/item?id=48681687
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 作者搭建了 hackmyclaw.com，邀请 2000 多人发送超过 6000 封邮件，试图诱骗 OpenClaw 的 AI 助手
+      Fiu 泄露 secrets.env 文件，但所有攻击均告失败。尽管攻击者使用了冒充权威、伪造紧急情况和多语言社会工程等高级手段，仅凭几行简单的安全指令搭配强大的模型（Opus
+      4.6）就成功抵御，使作者对防御提示注入更为乐观，但仍对赋予 AI 代理过大权限保持谨慎。
+    content_file: what-happened-after-2k-people-tried-to-hack-my-ai-assistant.md
+    summary: The author built hackmyclaw.com, inviting over 2,000 people to send 6,000+
+      emails attempting to trick Fiu, an OpenClaw AI assistant, into leaking a secrets.env
+      file, but none of the attacks succeeded. Despite sophisticated attempts involving
+      authority impersonation, fake emergencies, and multilingual social engineering,
+      a few simple security instructions paired with a powerful model (Opus 4.6) held
+      firm, leaving the author more optimistic about prompt-injection defense though
+      still cautious about granting AI agents broad permissions.
+  - url: https://aditya.patadia.org/p/ai-and-cloud-costs
+    title: Why current LLM costs are not sustainable
+    score: 86
+    comment_cnt: 108
+    comment_url: https://news.ycombinator.com/item?id=48683588
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 人工智能成本正给企业带来压力，但作者认为，由于模型性能趋于平稳、廉价的开放权重模型、专用推理芯片、零切换成本以及即将兴起的本地模型，前沿实验室收取的高价难以持续。最终结果将是价格下行压力，而这对消费者是有利的。
+    content_file: why-current-llm-costs-are-not-sustainable.md
+    summary: AI costs are straining companies, but the author argues that the high
+      prices charged by frontier labs are unsustainable due to plateauing model performance,
+      cheap open-weight models, specialized inference chips, zero switching costs,
+      and the coming rise of local models. The result will be downward price pressure
+      that ultimately benefits consumers.
   - url: https://www.jeffgeerling.com/blog/2026/framework-10g-ethernet-module-usb-c-complexity/
     title: Framework's 10G Ethernet module exposes USB-C's complexity
     score: 144
