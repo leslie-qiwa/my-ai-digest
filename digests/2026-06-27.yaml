@@ -1,10 +1,39 @@
 date: '2026-06-27'
-generated_at: 2026-06-27 20:00 UTC
+generated_at: 2026-06-27 22:03 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://cauenapier.com/blog/townsquare_release/
+    title: Turn your site into a place people can bump into each other
+    score: 105
+    comment_cnt: 55
+    comment_url: https://news.ycombinator.com/item?id=48699928
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 作者在自己的网站上添加了一个小巧的"城镇广场",用火柴人代表当前访客,大家可以看到彼此在读什么页面、四处走动并发送临时消息,没有账号也不保存聊天记录。在收到他人兴趣后,作者将其开源并提供免费公共服务器,并希望进一步扩展功能,例如像网环一样把不同网站连接起来。
+    content_file: turn-your-site-into-a-place-people-can-bump-into-each-other.md
+    summary: The author added a tiny "Town Square" to their website, where stick figures
+      represent current visitors who can see what others are reading, walk around,
+      and exchange ephemeral messages with no accounts or saved history. After interest
+      from others, the author open-sourced it and offered a free public server, and
+      now hopes to expand it with features like connecting sites together like a webring.
+  - url: https://www.lloydslist.com/LL1157680/Ships-keep-moving-through-Hormuz-despite-strike-and-suspension-of-IMO-exit-strategy
+    title: Ships keep moving through Hormuz despite strike
+    score: 53
+    comment_cnt: 110
+    comment_url: https://news.ycombinator.com/item?id=48700805
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 在集装箱船"Ever Lovely"号于阿曼一侧南部航线遭袭后,国际海事组织(IMO)与阿曼、伊朗和美国共同制定的霍尔木兹海峡撤离计划仍处于暂停状态,秘书长阿塞尼奥·多明格斯正寻求船舶不会遭袭的新保证。尽管计划暂停、伊朗革命卫队警告只有北部航线合法、且数艘船只调头返航,过往船舶仍继续通过阿曼和伊朗两条航道。
+    content_file: ships-keep-moving-through-hormuz-despite-strike.md
+    summary: The IMO's evacuation plan for the Strait of Hormuz, developed with Oman,
+      Iran and the US, remains suspended after the containership Ever Lovely was struck
+      on the southern Omani route, as secretary-general Arsenio Dominguez seeks renewed
+      guarantees that vessels will not be attacked. Despite the pause, the IRGC's
+      warning that only the northern route is legitimate, and several vessels reversing
+      course, traffic has continued through both the Omani and Iranian lanes.
   - url: https://news.mccombs.utexas.edu/research/foreign-funds-help-make-housing-unaffordable/
     title: International investment and local rules push prices up faster than supply
     score: 123
