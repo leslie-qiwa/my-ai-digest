@@ -1,0 +1,57 @@
+date: '2026-06-27'
+generated_at: 2026-06-27 00:04 UTC
+feeds:
+- id: hackernews-top
+  label: Hacker News Hot Discussions
+  provider: hn_algolia
+  items:
+  - url: https://kotaku.com/playstation-store-movies-digital-studio-canal-terminator-2000711013
+    title: PlayStation Is Deleting 551 Movies from Customers' Accounts
+    score: 125
+    comment_cnt: 69
+    comment_url: https://news.ycombinator.com/item?id=48691346
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 索尼正在通知 PlayStation 商店用户，他们"购买"的 551 部由 StudioCanal 发行的电影和电视剧——包括《终结者2》《全面回忆》和《杀出个黎明》——将于
+      9 月 1 日因授权协议到期而从其库中移除，且未提及任何退款或补偿。此事再次表明，数字"购买"实质上只是可被随时收回的临时租赁，这一风险同样适用于游戏。
+    content_file: playstation-is-deleting-551-movies-from-customers-accounts.md
+    summary: Sony is notifying PlayStation Store users that 551 StudioCanal-distributed
+      movies and TV shows they "purchased"—including Terminator 2, Total Recall, and
+      From Dusk Till Dawn—will be removed from their libraries on September 1 due
+      to expiring licensing agreements, with no mention of refunds or compensation.
+      The case again highlights that digital "purchases" are effectively temporary
+      rentals that can be revoked at any time, a risk that also applies to games.
+  - url: https://blog.doubleword.ai/frontier-os-llm
+    title: The gap between open weights LLMs and closed source LLMs
+    score: 87
+    comment_cnt: 73
+    comment_url: https://news.ycombinator.com/item?id=48692058
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 一张在推特上流传的图表显示,在 Artificial Analysis 智能指数上,开放权重与闭源大语言模型之间的差距将在 2026
+      年 12 月 3 日前后缩小为零,暗示届时会有前沿开源模型发布。然而,将该分析扩展到全部 18 个基准后发现,平均差距几乎保持平稳,略低于 5 个月,而所谓的趋近主要由编程类基准驱动,而非全面追赶。
+    content_file: the-gap-between-open-weights-llms-and-closed-source-llms.md
+    summary: A viral plot suggested that the gap between open-weight and closed-source
+      LLMs on the Artificial Analysis Intelligence Index will shrink to zero around
+      December 3rd 2026, implying a frontier open-source release by then. However,
+      repeating the analysis across all 18 benchmarks shows the average gap staying
+      nearly flat at just under 5 months, with most of the apparent convergence driven
+      by coding benchmarks rather than a broad catch-up.
+  - url: https://gossamer-lang.org/
+    title: 'Gossamer: a Rust-flavoured language with real goroutines and pause-free
+      memory'
+    score: 62
+    comment_cnt: 50
+    comment_url: https://news.ycombinator.com/item?id=48690231
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: Gossamer 是一门带有 Rust 风味的系统编程语言（Apache-2.0 许可，v0.19.1 预 1.0 版），具备前向管道、默认不可变、基于
+      M:N 调度器的真正 goroutine，以及通过确定性引用计数加 arena 区域实现的无停顿内存管理——没有借用检查器、async 或垃圾回收器。它既能通过字节码虚拟机和
+      REPL 快速迭代，也能借助 LLVM 编译为单一、无依赖的原生二进制文件，并配有丰富的标准库和可在浏览器中运行的示例。
+    content_file: gossamer-a-rust-flavoured-language-with-real-goroutines-and.md
+    summary: Gossamer is a Rust-flavoured systems programming language (Apache-2.0,
+      v0.19.1 pre-1.0) featuring forward pipes, immutability by default, real goroutines
+      on an M:N scheduler, and pause-free memory via deterministic reference counting
+      plus arena regions—no borrow checker, async, or garbage collector. It runs from
+      a bytecode VM and REPL for fast iteration or compiles to a single dependency-free
+      native binary via LLVM, with a broad standard library and browser-runnable samples.
