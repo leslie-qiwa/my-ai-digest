@@ -1,10 +1,26 @@
 date: '2026-06-27'
-generated_at: 2026-06-27 04:03 UTC
+generated_at: 2026-06-27 06:03 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://spectrum.ieee.org/ai-in-mathematics
+    title: AI in mathematics is forcing big questions
+    score: 94
+    comment_cnt: 60
+    comment_url: https://news.ycombinator.com/item?id=48692883
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 随着人工智能日益能够产出可发表、达到奥林匹克水平、甚至具有原创性的数学成果，本文探讨了"成为数学家"还剩下什么意义，并主张数学最深层的价值在于人类在漫长求证过程中所获得的乐趣与理解。文章梳理了人工智能不断扩大的作用——从借助计算机证明的四色定理，到如今与证明助手结合、能自动完成形式化并自主攻克未解难题的大语言模型。
+    content_file: ai-in-mathematics-is-forcing-big-questions.md
+    summary: As AI systems increasingly produce publishable, Olympiad-level, and even
+      original mathematical results, the article asks what remains meaningful about
+      being a mathematician—arguing the field's deepest value lies in the human joy
+      and understanding gained from the long struggle toward a proof. It traces AI's
+      growing role, from the computer-aided four-color theorem to LLMs paired with
+      proof assistants that now automate formalization and autonomously tackle unsolved
+      problems.
   - url: https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies
     title: U.S. allows Anthropic to release Mythos AI to ‘trusted’ US organizations
     score: 283
