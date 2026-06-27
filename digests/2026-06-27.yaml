@@ -1,10 +1,26 @@
 date: '2026-06-27'
-generated_at: 2026-06-27 06:03 UTC
+generated_at: 2026-06-27 08:03 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://news.ycombinator.com/item?id=48694802
+    title: 'Ask HN: MacBook vs. Dedicated GPU for LLM'
+    score: 24
+    comment_cnt: 50
+    comment_url: https://news.ycombinator.com/item?id=48694802
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 一个论坛讨论串围绕在 MacBook 上本地运行大语言模型与使用独立 GPU 或云端基础设施进行比较，指出 Mac 拥有充裕的共享内存、低噪音和良好的整合性，但算力（FLOP/s）远低于更便宜的
+      Nvidia GPU。参与者分享了真实的性能测试和配置，普遍认为如果你本来就想买 Mac 那它很不错，但在严肃编程方面，前沿云端模型在速度和质量上仍然胜出。
+    content_file: ask-hn-macbook-vs-dedicated-gpu-for-llm.md
+    summary: A forum thread debates running LLMs locally on MacBooks versus dedicated
+      GPUs or cloud infrastructure, noting that Macs offer abundant shared RAM, low
+      noise, and good integration but far less compute (FLOP/s) than cheaper Nvidia
+      GPUs. Participants share real benchmarks and setups, generally agreeing Macs
+      are great if you wanted one anyway, while frontier cloud models still win on
+      speed and quality for serious coding.
   - url: https://spectrum.ieee.org/ai-in-mathematics
     title: AI in mathematics is forcing big questions
     score: 94
