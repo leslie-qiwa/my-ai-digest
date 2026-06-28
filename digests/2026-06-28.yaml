@@ -1,10 +1,26 @@
 date: '2026-06-28'
-generated_at: 2026-06-28 02:01 UTC
+generated_at: 2026-06-28 04:03 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://jayacunzo.com/blog/your-move-chief
+    title: Response to AI slop is from Robin Williams
+    score: 93
+    comment_cnt: 55
+    comment_url: https://news.ycombinator.com/item?id=48703452
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: 文章借用罗宾·威廉姆斯在《心灵捕手》公园长椅上的经典独白，指出人工智能与泛滥的网络建议只是"知道"——理论与信息，而人的真正价值来自亲身经历：爱、失去、战争与痛苦，这些都无法从书本中读到。作者呼吁读者不要被"无限知识"的喧嚣说服，从而否定自己亲历的经验与创作的声音，因为艺术正是把亲历的真理在内心转化为意义，而这只有独一无二的人才能创造。
+    content_file: response-to-ai-slop-is-from-robin-williams.md
+    summary: 'Using Robin Williams''s famous park-bench monologue from Good Will Hunting,
+      the essay argues that AI and the flood of online advice represent mere "knowing"—theory
+      and information—while real human worth comes from lived experience: love, loss,
+      war, and pain that cannot be read in a book. It urges readers not to let the
+      noise of infinite knowledge convince them their firsthand experiences and creative
+      voice no longer matter, because art is the internal synthesis of lived truth
+      into meaning that only a unique human can produce.'
   - url: https://github.com/kageroumado/adrafinil
     title: 'Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work'
     score: 90
