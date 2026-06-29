@@ -1,10 +1,30 @@
 date: '2026-06-29'
-generated_at: 2026-06-29 20:00 UTC
+generated_at: 2026-06-29 22:00 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://worksinprogress.co/issue/how-to-lie-about-radiation/
+    title: The Radiation Exposure Lie
+    score: 102
+    comment_cnt: 74
+    comment_url: https://news.ycombinator.com/item?id=48721308
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://funnelfiasco.com/blog/2026/06/28/on-cigarettes/
+    title: On cigarettes
+    score: 45
+    comment_cnt: 63
+    comment_url: https://news.ycombinator.com/item?id=48712762
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
   - url: https://torrentfreak.com/european-isps-want-rightsholders-held-accountable-for-overblocking-damage/
     title: European ISPs Want Rightsholders Held Accountable for Overblocking Damage
     score: 225
