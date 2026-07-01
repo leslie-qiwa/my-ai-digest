@@ -1,10 +1,61 @@
 date: '2026-07-01'
-generated_at: 2026-07-01 12:00 UTC
+generated_at: 2026-07-01 14:01 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://asahilinux.org/2026/06/progress-report-7-1/
+    title: Asahi Linux 7.1 Progress Report
+    score: 320
+    comment_cnt: 83
+    comment_url: https://news.ycombinator.com/item?id=48744518
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://www.thefocalpoints.com/p/new-study-frog-derived-gut-bacterium
+    title: Single Dose of Frog-Derived Gut Bacterium Eradicates 100% of Tumors in
+      Mice
+    score: 220
+    comment_cnt: 120
+    comment_url: https://news.ycombinator.com/item?id=48744232
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://blog.arxiv.org/2026/06/30/arxivs-next-chapter/
+    title: ArXiv's Next Chapter
+    score: 187
+    comment_cnt: 55
+    comment_url: https://news.ycombinator.com/item?id=48741748
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://cleberg.net/blog/internet.html
+    title: The Internet I Grew Up with Doesn't Exist Anymore
+    score: 147
+    comment_cnt: 125
+    comment_url: https://news.ycombinator.com/item?id=48744655
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://wangcong.org/2026-06-30-why-i-stopped-arguing-with-people.html
+    title: Why I Stopped Arguing with People
+    score: 89
+    comment_cnt: 56
+    comment_url: https://news.ycombinator.com/item?id=48746445
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
   - url: https://gauthier-lechevalier.com/radar
     title: I built a mmWave material classification radar (2025)
     score: 188
