@@ -1,10 +1,71 @@
 date: '2026-07-01'
-generated_at: 2026-07-01 14:01 UTC
+generated_at: 2026-07-01 16:01 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://mynintendonews.com/2026/06/26/nintendo-has-raised-its-employees-base-salary-by-10/
+    title: Nintendo has raised its employees base salary by 10%
+    score: 324
+    comment_cnt: 154
+    comment_url: https://news.ycombinator.com/item?id=48745113
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://github.com/google/copybara
+    title: 'Google copybara: moving code between repositories'
+    score: 275
+    comment_cnt: 53
+    comment_url: https://news.ycombinator.com/item?id=48740698
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://www.eurogamer.net/sony-ending-playstation-discs-physical-media-january-2028
+    title: Sony will no longer produce discs for PlayStation games starting in January
+      2028
+    score: 79
+    comment_cnt: 66
+    comment_url: https://news.ycombinator.com/item?id=48745785
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://www.thedrive.com/news/your-kids-school-bus-is-about-to-become-a-roaming-surveillance-vehicle
+    title: Your Kids' School Bus Is About to Become a Roaming Surveillance Vehicle
+    score: 65
+    comment_cnt: 54
+    comment_url: https://news.ycombinator.com/item?id=48746842
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://www.theverge.com/gadgets/959899/meta-ai-glasses-paywall-rate-limit
+    title: Meta is adding rate limits and soft paywall to smart glasses
+    score: 50
+    comment_cnt: 51
+    comment_url: https://news.ycombinator.com/item?id=48742717
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://blog.vrypan.net/2026/06/29/260629-whats-wrong-with-eu-age-verification/
+    title: What's wrong with EU age verification? (Nothing)
+    score: 24
+    comment_cnt: 69
+    comment_url: https://news.ycombinator.com/item?id=48746404
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
   - url: https://asahilinux.org/2026/06/progress-report-7-1/
     title: Asahi Linux 7.1 Progress Report
     score: 320
