@@ -1,10 +1,80 @@
 date: '2026-07-01'
-generated_at: 2026-07-01 20:01 UTC
+generated_at: 2026-07-01 22:02 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://ciechanow.ski/internal-combustion-engine/
+    title: Internal Combustion Engine (2021)
+    score: 245
+    comment_cnt: 55
+    comment_url: https://news.ycombinator.com/item?id=48746076
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://easyoptouts.com/guides/apple-hide-my-email-is-leaking-email-addresses
+    title: Apple 'Hide My Email' vulnerability reveals peoples' real email addresses
+    score: 227
+    comment_cnt: 50
+    comment_url: https://news.ycombinator.com/item?id=48744606
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://blog.demofox.org/2026/07/01/what-to-learn-to-be-a-graphics-programmer/
+    title: What to learn to be a graphics programmer
+    score: 166
+    comment_cnt: 72
+    comment_url: https://news.ycombinator.com/item?id=48750710
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://www.anthropic.com/news/redeploying-fable-5
+    title: Redeploying Fable 5
+    score: 159
+    comment_cnt: 50
+    comment_url: https://news.ycombinator.com/item?id=48741853
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://support.claude.com/en/articles/15424964-claude-fable-5-promotional-access
+    title: Claude Fable 5 Promotional Access
+    score: 86
+    comment_cnt: 70
+    comment_url: https://news.ycombinator.com/item?id=48751978
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://arxiv.org/abs/2606.22748
+    title: Are readers generating fiction with AI models?
+    score: 35
+    comment_cnt: 53
+    comment_url: https://news.ycombinator.com/item?id=48750247
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://www.weaverobotics.com/isaac-1
+    title: Weave Robotics launches Isaac 1, a $7,999 home robot with Fall 2026 deliveries
+    score: 31
+    comment_cnt: 54
+    comment_url: https://news.ycombinator.com/item?id=48750989
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
   - url: https://box2d.org/posts/2026/06/announcing-box3d/
     title: Box3D, an open source 3D physics engine
     score: 320
