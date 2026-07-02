@@ -1,10 +1,51 @@
 date: '2026-07-02'
-generated_at: 2026-07-02 06:01 UTC
+generated_at: 2026-07-02 08:01 UTC
 feeds:
 - id: hackernews-top
   label: Hacker News Hot Discussions
   provider: hn_algolia
   items:
+  - url: https://f-droid.org/2026/07/01/adv-malware.html
+    title: A new Android malware from Google
+    score: 214
+    comment_cnt: 84
+    comment_url: https://news.ycombinator.com/item?id=48755965
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://senior-swe-bench.snorkel.ai/
+    title: 'Senior SWE-Bench: open-source benchmark that assesses agents as senior
+      engineers'
+    score: 67
+    comment_cnt: 57
+    comment_url: https://news.ycombinator.com/item?id=48755928
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://intrepidkarthi.com/writing/the-gauge-broke/
+    title: 'The gauge broke: devs felt 20% faster with AI, measured 19% slower'
+    score: 61
+    comment_cnt: 63
+    comment_url: https://news.ycombinator.com/item?id=48757440
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
+  - url: https://news.ycombinator.com/item?id=48746752
+    title: 'Launch HN: Parsewise (YC P25) – Reason Across Documents with an API'
+    score: 51
+    comment_cnt: 50
+    comment_url: https://news.ycombinator.com/item?id=48746752
+    source: Hacker News Hot Discussions
+    tags: []
+    summary_zh: ''
+    content_file: ''
+    summary: ''
   - url: https://tedium.co/2026/07/01/online-web-forums-retrospective/
     title: Bring back crappy forums
     score: 135
